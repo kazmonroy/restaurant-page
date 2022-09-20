@@ -43,6 +43,7 @@ nav, footer {
 
 
 .link { 
+    display: inline-block;
     cursor: pointer;
     padding: 15px 20px;
     text-transform: uppercase;
@@ -52,6 +53,7 @@ nav, footer {
 .link:hover {
     border-bottom: 2px solid var(--main);
     font-weight: 600;
+
 }
 
 
