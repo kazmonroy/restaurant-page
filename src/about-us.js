@@ -12,13 +12,13 @@ function createAboutUsCards() {
   const cardAboutUs = createCard(
     "About Us",
     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam?",
-    "../src/img/sushi-1.jpg"
+    "/src/img/sushi-1.jpg"
   );
 
   const cardOurMission = createCard(
     "Our mission",
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, numquam!",
-    "../src/img/sushi-2.jpg"
+    "/src/img/sushi-2.jpg"
   );
 
   cardOurMission.classList.add("reverse");
