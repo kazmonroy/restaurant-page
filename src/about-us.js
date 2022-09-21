@@ -1,45 +1,54 @@
-export default function loadAboutUs() {
-  const content = document.querySelector("#content");
+export default function loadAboutUsPage() {
+  const mainContainer = document.querySelector(".main-container");
 
-  content.innerHTML = `
+  mainContainer.textContent = "";
+  mainContainer.appendChild(createAboutUsCards());
+}
 
-  <nav>
-  <ul class="nav-links">
-    <li><a href="./index.html" class="link">Home</a></li>
-    <li><a href="./about-us.html" class="link">About us</a></li>
-    <li><a href="./menu.html" class="link">Menu</a></li>
-  </ul>
-</nav>
+function createAboutUsCards() {
+  const cards = document.createElement("div");
+  cards.classList.add("cards");
 
-<section class="about-us-section">
-  <div class="cards">
-    <div class="card">
-      <div class="card-text">
-        <h2>About Us</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
-          culpa nesciunt quam porro, architecto eos?
-        </p>
-      </div>
+  const cardAboutUs = createCard(
+    "About Us",
+    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam?",
+    "../src/img/sushi-1.jpg"
+  );
 
-      <img src="../src/img/sushi-2.jpg" alt="" />
-    </div>
-    <div class="card">
-      <img src="../src/img/sushi-1.jpg" alt="" />
-      <div class="card-text">
-        <h2>Our mission</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
-          culpa nesciunt quam porro, architecto eos?
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+  const cardOurMission = createCard(
+    "Our mission",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, numquam!",
+    "../src/img/sushi-2.jpg"
+  );
 
-<footer>
-  <a href="">Made by Kaz <i class="fa-brands fa-github"></i></a>
-</footer>
-  
-  `;
+  cardOurMission.classList.add("reverse");
+
+  cards.appendChild(cardAboutUs);
+  cards.appendChild(cardOurMission);
+
+  return cards;
+}
+
+function createCard(title, text, img) {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const cardInfoContainer = document.createElement("div");
+  card.classList.add("card-info");
+
+  const cardTitle = document.createElement("h2");
+  const cardText = document.createElement("p");
+  const cardImg = document.createElement("img");
+
+  cardTitle.textContent = title;
+  cardText.textContent = text;
+  cardImg.src = img;
+
+  cardInfoContainer.appendChild(cardTitle);
+  cardInfoContainer.appendChild(cardText);
+
+  card.appendChild(cardInfoContainer);
+  card.appendChild(cardImg);
+
+  return card;
 }
