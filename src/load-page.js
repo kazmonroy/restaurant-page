@@ -10,22 +10,6 @@ export default function loadPage() {
   wrapper.appendChild(createFooter());
 
   loadHomePage();
-
-  const aboutUsBtn = document.querySelector("#about-us");
-  aboutUsBtn.addEventListener("click", loadAboutUsPage);
-
-  const homeBtn = document.querySelector("#home");
-  homeBtn.addEventListener("click", () => {
-    const mainContainer = document.querySelector(".main-container");
-
-    if (mainContainer.firstElementChild.classList.contains("cards")) {
-      const cards = mainContainer.querySelector(".cards");
-      mainContainer.removeChild(mainContainer.firstChild);
-      mainContainer.appendChild(loadHomePage());
-    }
-  });
-
-  const menuBtn = document.querySelector("#menu");
 }
 
 function createNavBar() {

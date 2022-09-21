@@ -33,6 +33,10 @@ body {
     justify-content: center;
 }
 
+.main-container.bg {
+    background-color: #f8f8f8;
+}
+
 .hero-container {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/hero-cover.jpg);
     background-position: center;
@@ -140,7 +144,10 @@ footer a {
     grid-template-columns: 800px;
     justify-items: center;
     overflow: hidden;
-    height: 90vh;
+    height: calc(90vh - 80px);
+    background-color: white;
+    margin: 40px 0px;
+
 
 }
 

@@ -2,6 +2,7 @@ export default function loadAboutUsPage() {
   const mainContainer = document.querySelector(".main-container");
 
   mainContainer.textContent = "";
+  mainContainer.classList.add("bg");
   mainContainer.appendChild(createAboutUsCards());
 }
 
@@ -29,12 +30,12 @@ function createAboutUsCards() {
   return cards;
 }
 
-function createCard(title, text, img) {
+export function createCard(title, text, img) {
   const card = document.createElement("div");
   card.classList.add("card");
 
   const cardInfoContainer = document.createElement("div");
-  card.classList.add("card-info");
+  cardInfoContainer.classList.add("card-info");
 
   const cardTitle = document.createElement("h2");
   const cardText = document.createElement("p");

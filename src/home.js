@@ -1,35 +1,3 @@
-// // export default function loadHome() {
-// //   const mainContainer = document.querySelector(".main-container");
-// //   //   mainContainer.textContent = "";
-// //   //   mainContainer.appendChild(createHero());
-// //   //   if (mainContainer.contains(".cards")) {
-// //   //     console.log("it does");
-// //   //   }
-
-// //   createHero();
-// // }
-
-// export default function loadHome() {
-//   const mainContainer = document.querySelector(".main-container");
-
-//   if (mainContainer) {
-//     mainContainer.style.border = "2px solid red";
-//     return createHero();
-//   }
-
-//   return createHero();
-
-//   //   if (mainContainer.firstElementChild.classList.contains("hero-container")) {
-//   //     console.log("it does");
-//   //     mainContainer.textContent = "";
-//   //     loadAboutUsPage();
-//   //   } else {
-//   //     return createHero();
-//   //   }
-
-//   //   return createHero();
-// }
-
 export default function createHero() {
   const heroContainer = document.createElement("div");
   heroContainer.classList.add("hero-container");
