@@ -15,7 +15,6 @@ Helped me to sharp my JavaScript skills by applying Modules using Webpack.
 ## Live preview
 
 - [Resraurant Project](https://kazmonroy.github.io/resto-page/)
-  Inspired by [Vegan Sushi Bar](https://www.vegansushibar.nl/ "Vegan Sushi Bar")
 
 ## License
 
