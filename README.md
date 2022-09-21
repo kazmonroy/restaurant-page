@@ -14,7 +14,7 @@ Helped me to sharp my JavaScript skills by applying Modules using Webpack.
 
 ## Live preview
 
-- [Resraurant Project](https://kazmonroy.github.io/resto-page/)
+- [Resraurant Project](https://kazmonroy.github.io/restaurant-page/)
 
 ## License
 
