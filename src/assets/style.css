@@ -29,6 +29,8 @@ body {
     grid-area: main-content;
     display: grid;
     justify-content: center;
+    height: 92vh;
+
 }
 
 .main-container.bg {
@@ -84,7 +86,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 90vh;
+    height: auto;
     width: 100vw;
 
 }
@@ -135,10 +137,11 @@ body {
 
 footer {
     grid-area: footer;
-    height: 50px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 
 
 }
@@ -287,6 +290,10 @@ footer a {
     .dish-info {
         text-align: center;
         padding: 0 0 20px 0;
+        font-size: .8rem;
+    }
+
+    footer {
         font-size: .8rem;
     }
 
