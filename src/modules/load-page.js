@@ -1,6 +1,5 @@
-import "./style.css";
+import "../style.css";
 import loadHomePage from "./home.js";
-import loadAboutUsPage from "./about-us.js";
 
 export default function loadPage() {
   const wrapper = document.querySelector("#wrapper");
@@ -20,14 +19,17 @@ function createNavBar() {
 
   homeBtn.textContent = "Home";
   homeBtn.setAttribute("id", "home");
+  homeBtn.setAttribute("class", "link link-dirty");
 
   const aboutUsBtn = document.createElement("a");
   aboutUsBtn.textContent = "About us";
   aboutUsBtn.setAttribute("id", "about-us");
+  aboutUsBtn.setAttribute("class", "link link-dirty");
 
   const menuBtn = document.createElement("a");
   menuBtn.textContent = "Menu";
   menuBtn.setAttribute("id", "menu");
+  menuBtn.setAttribute("class", "link link-dirty");
 
   nav.appendChild(homeBtn);
   nav.appendChild(aboutUsBtn);
