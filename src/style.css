@@ -37,16 +37,6 @@ body {
     background-color: #f8f8f8;
 }
 
-.hero-container {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/hero-cover.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 90vh;
-    width: 100vw;
-
-}
 
 .nav-bar {
     grid-area: nav;
@@ -72,6 +62,17 @@ body {
 
 
 /* HOME PAGE */
+
+.hero-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/hero-cover.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 90vh;
+    width: 100vw;
+
+}
 
 .hero-text {
     height: 100%;
@@ -144,10 +145,9 @@ footer a {
     grid-template-columns: 800px;
     justify-items: center;
     overflow: hidden;
-    height: calc(90vh - 80px);
+    min-height: calc(90vh - 80px);
     background-color: white;
     margin: 40px 0px;
-
 
 }
 
@@ -164,11 +164,12 @@ footer a {
     padding: 30px;
 }
 
-.card-info h2 {
+.card-info h2, .dish-info h2 {
     color: var(--main);
+    cursor: pointer;
 }
 
-.card-info p {
+.card-info p, .dish-info p {
     font-size: .9rem;
     color: gray;
     line-height: 25px;
@@ -181,32 +182,101 @@ footer a {
 
 .card img {
     max-width: 100%;
-  
     object-fit: cover;
+    height: auto;
+    cursor: pointer;
 
+
+}
+
+
+/* MENU PAGE */
+
+.menu-container {
+    width: 50vw;
+    min-height: calc(90vh - 80px);
+    margin: 40px 0px;
+    display: grid;
+    align-content: center;
+
+}
+
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+}
+
+.dish {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+
+}
+
+.dish-info {
+    padding-right: 30px;
+}
+
+.dish img {
+    max-width: 100%;
+    object-fit: cover;
 }
 
 
 
 @media (max-width: 800px) {
 
+
     .cards {
         grid-template-columns: 1fr;
+        margin: 0px 20px;
     }
 
     .card {
         grid-template-columns: 1fr;
         
-    }
+    } 
 
     .card.reverse img {
         order: 0;
     }
 
+    .card img {
+        width: 500px;
+        height: 500px;
+    }
 
-
-
+    .hero-text h2 {
+        font-size: 2.5rem;
+    }
     
+    /* .dish {
+        grid-template-columns: repeat(1, 1fr);
+    } */
+
+    .dish-info {
+        text-align: center;
+        padding: 0 0 10px 0;
+    }
+
+    .menu-container {
+        width: 90vw;
+
+    }
+
+    .menu-list {
+        grid-template-columns: 1fr;
+    }
+
+
+ 
+
 
 
 }
