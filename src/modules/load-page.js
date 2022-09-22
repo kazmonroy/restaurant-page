@@ -1,4 +1,4 @@
-import "../style.css";
+import "../assets/style.css";
 import loadHomePage from "./home.js";
 
 export default function loadPage() {
